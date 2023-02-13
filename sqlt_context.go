@@ -14,7 +14,7 @@ import (
 func open(ctx context.Context, driverName, sources string, groupName string) (*DB, error) {
 	var err error
 
-	conns := strings.Split(sources, ";")
+	conns := strings.Split(sources, "|")
 	connsLength := len(conns)
 
 	// check if no source is available
